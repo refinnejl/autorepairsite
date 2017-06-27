@@ -1,9 +1,23 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+        
+        ng\:form {
+            display: block;
+        }
+    </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
@@ -11,34 +25,297 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/app/17097d2b.app.css"/>
-  </head>
-  <body ng-app="mydieselmechanicApp">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/app/17097d2b.app.css">
+</head>
+
+<body ng-app="mydieselmechanicApp" class="ng-scope">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+    <!-- uiView:  -->
+    <div ui-view="" class="ng-scope">
+        <!-- ngInclude: 'components/navbar/navbar.html' -->
+        <div ng-include="'components/navbar/navbar.html'" class="ng-scope">
+            <div class="navbar navbar-default navbar-static-top ng-scope" ng-controller="NavbarCtrl">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!--button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button--><a style="font-size: 16px;" href="tel:7728789166" class="navbar-brand">(772) 878-9166 / my_mechanic@ymail.com</a></div>
+                    <!--div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ng-href="{{item.link}}">{{item.title}}</a>
+        </li>
+        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
+        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
+        <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+      </ul>
+    </div-->
+                </div>
+            </div>
+        </div>
+        <!-- ngInclude: 'components/header/header.html' -->
+        <div ng-include="'components/header/header.html'" class="ng-scope">
+            <header class="hero-unit ng-scope" id="banner">
+                <div class="container">
+                    <h1><a href="/">My Diesel Mechanic</a></h1>
+                    <p class="lead"><a href="/">Specializing in Power Strokes 7.3l and 6.0l Ford Turbo Diesels</a></p>
+                    <a href="/"><img src="assets/images/ford-logo-200w.png" alt="I'm Yeoman"></a>
+                </div>
+            </header>
+        </div>
+        <div class="container ng-scope">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Contact Info</h3>
+                        </div>
+                        <div class="panel-body">
+                            <a href="//www.google.com/url?sa=D&amp;oi=plus&amp;q=https://www.google.com/maps/place/My%2BMechanic%2Bof%2Bthe%2BT.C,%2Bllc/data%3D!4m2!3m1!1s0x88dee963f9567c67:0x814c832171f455ab?gl%3DUS%26hl%3Den" target="_blank"><img alt="Location" src="//www.google.com/maps/vt/data=IPJF7m116ARqg0ah3PQQcPJjK4i6YlvS9ebHQ-ChEK6XIRLs0g89A8Tdzbyv0emMeoYB_WdX9YU1dQ" class="img-full-width img-responsive"></a>
+                            <ul class="fa-ul">
+                                <li class="lead"><i class="fa-li fa fa-map-marker"></i> <a href="//www.google.com/url?sa=D&amp;oi=plus&amp;q=https://www.google.com/maps/place/My%2BMechanic%2Bof%2Bthe%2BT.C,%2Bllc/data%3D!4m2!3m1!1s0x88dee963f9567c67:0x814c832171f455ab?gl%3DUS%26hl%3Den"
+                                        target="_blank"><address>1974 SW Biltmore St Port St Lucie, FL 34984</address></a></li>
+                                <li class="lead"><i class="fa-li fa fa-phone"></i> <a href="tel:7728789166">(772) 878-9166</a></li>
+                                <li class="lead"><i class="fa-li fa fa-fax"></i> <a href="tel:7728789166">(772) 878-3268</a></li>
+                                <li class="lead"><i class="fa-li fa fa-envelope"></i> <a href="mailto:my_mechanic@ymail.com">my_mechanic@ymail.com</a></li>
+                                <li class="lead"><i class="fa-li fa fa-clock-o"></i> Open Monday-Friday 9:00 am - 6:00 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Why Us?</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>We believe honesty pays and that's been our philosophy for over 20 Years.</p>
+                            <p>We get the job done right the first time at an honest price.</p>
+                            <p>We're Ford dealer trained and certified since 1992, ASE Certified and Licensed Technicians</p>
+                            <p>We'll always give it to you straight - even when you might not want to hear it.</p>
+                            <p>We offer same-day appointments and quick turn-arounds on most services, so <strong><a href="tel:7728789166">call us</a>, <a href="mailto:my_mechanic@ymail.com">email us</a> or <a href="tel:7728789166">fax us today</a></strong>                                to get your truck in here!</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Our Services</h3>
+                        </div>
+                        <div class="panel-body columned">
+                            <div class="half-size">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa fa-check"></i>Vehicle Service</li>
+                                    <li><i class="fa-li fa fa-check"></i>General Repairs</li>
+                                    <li><i class="fa-li fa fa-check"></i>Major Repairs</li>
+                                    <li><i class="fa-li fa fa-check"></i>Timing Belts</li>
+                                    <li><i class="fa-li fa fa-check"></i>Brakes</li>
+                                </ul>
+                            </div>
+                            <div class="half-size">
+                                <ul class="fa-ul">
+                                    <li><i class="fa-li fa fa-check"></i>Air Conditioning</li>
+                                    <li><i class="fa-li fa fa-check"></i>Water Pumps</li>
+                                    <li><i class="fa-li fa fa-check"></i>Engine Builds</li>
+                                    <li><i class="fa-li fa fa-check"></i>Maintenance</li>
+                                    <li><i class="fa-li fa fa-check"></i>Oil Changes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Our Work</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="carousel-example-generic" ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="photosInterval">
+                                <ol class="carousel-indicators" ng-show="slides.length > 1">
+                                    <!-- ngRepeat: slide in slides track by $index -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <!-- end ngRepeat: slide in slides track by $index -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <!-- end ngRepeat: slide in slides track by $index -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    <!-- end ngRepeat: slide in slides track by $index -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                    <!-- end ngRepeat: slide in slides track by $index -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                                    <!-- end ngRepeat: slide in slides track by $index -->
+                                </ol>
+                                <div class="carousel-inner" ng-transclude="">
+                                    <!-- ngRepeat: slide in slides -->
+                                    <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="active item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/1"><img ng-src="/assets/images/f-250/1.jpg" style="margin:auto" src="/assets/images/f-250/1.jpg"></a>
+                                        <div class="carousel-caption ng-scope">
+                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/1">F-250</a></h4>
+                                            <p class="ng-binding"></p>
+                                        </div>
+                                    </div>
+                                    <!-- end ngRepeat: slide in slides -->
+                                    <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/2"><img ng-src="/assets/images/f-350/1.jpg" style="margin:auto" src="/assets/images/f-350/1.jpg"></a>
+                                        <div class="carousel-caption ng-scope">
+                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/2">F-350</a></h4>
+                                            <p class="ng-binding"></p>
+                                        </div>
+                                    </div>
+                                    <!-- end ngRepeat: slide in slides -->
+                                    <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/3"><img ng-src="/assets/images/jeep/1.jpg" style="margin:auto" src="/assets/images/jeep/1.jpg"></a>
+                                        <div class="carousel-caption ng-scope">
+                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/3">Jeep</a></h4>
+                                            <p class="ng-binding"></p>
+                                        </div>
+                                    </div>
+                                    <!-- end ngRepeat: slide in slides -->
+                                    <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/4"><img ng-src="/assets/images/jeep-wrangler/1.jpg" style="margin:auto" src="/assets/images/jeep-wrangler/1.jpg"></a>
+                                        <div class="carousel-caption ng-scope">
+                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/4">Jeep Wrangler</a></h4>
+                                            <p class="ng-binding"></p>
+                                        </div>
+                                    </div>
+                                    <!-- end ngRepeat: slide in slides -->
+                                    <div ng-class="{
+    'active': leaving || (active &amp;&amp; !entering),
+    'prev': (next || active) &amp;&amp; direction=='prev',
+    'next': (next || active) &amp;&amp; direction=='next',
+    'right': direction=='prev',
+    'left': direction=='next'
+  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
+                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/5"><img ng-src="/assets/images/mustang/1.jpg" style="margin:auto" src="/assets/images/mustang/1.jpg"></a>
+                                        <div class="carousel-caption ng-scope">
+                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/5">Mustang</a></h4>
+                                            <p class="ng-binding"></p>
+                                        </div>
+                                    </div>
+                                    <!-- end ngRepeat: slide in slides -->
+                                </div>
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">What Our Customers Say</h3>
+                        </div>
+                        <div class="panel-body">
+                            <blockquote>
+                                <p>Joe and his team literally saved my truck.</p>
+                                <p>When I brought it to him, I was considering selling it and getting what I could for it because I was having so many problems.</p>
+                                <p>After some honest discussions, I decided to let Joe's team try and fix it and haven't had a problem since.</p>
+                                <footer>Cody Swann <cite title="Source Title">2006 F-250</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Features:</h1>
+      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
+        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div-->
+        <!-- ngInclude: 'components/footer/footer.html' -->
+        <div ng-include="'components/footer/footer.html'" class="ng-scope">
+            <footer class="footer ng-scope">
+                <div class="container">
+                    <p>© My Mechanic of the T.C, LLC</p>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-XXXXX-X');
-      ga('send', 'pageview');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
     </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-    <script src="/app/17c823c5.vendor.js"></script>
 
-        <script src="/app/30497fbf.app.js"></script>
 </body>
+
 </html>
