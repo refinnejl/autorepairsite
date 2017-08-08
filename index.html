@@ -1,320 +1,454 @@
-<html class="no-js">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en" class="wide wow-animation">
 
 <head>
-    <style type="text/css">
-        @charset "UTF-8";
-        [ng\:cloak],
-        [ng-cloak],
-        [data-ng-cloak],
-        [x-ng-cloak],
-        .ng-cloak,
-        .x-ng-cloak,
-        .ng-hide:not(.ng-hide-animate) {
-            display: none !important;
-        }
-        
-        ng\:form {
-            display: block;
-        }
-    </style>
-    <meta charset="utf-8">
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <base href="/">
-    <title>My Diesel Mechanic</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="/app/17097d2b.app.css">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
 </head>
 
-<body ng-app="mydieselmechanicApp" class="ng-scope">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
-    <!-- uiView:  -->
-    <div ui-view="" class="ng-scope">
-        <!-- ngInclude: 'components/navbar/navbar.html' -->
-        <div ng-include="'components/navbar/navbar.html'" class="ng-scope">
-            <div class="navbar navbar-default navbar-static-top ng-scope" ng-controller="NavbarCtrl">
-                <div class="container">
-                    <div class="navbar-header">
-                        <!--button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button--><a style="font-size: 16px;" href="tel:7728789166" class="navbar-brand">(772) 878-9166 / my_mechanic@ymail.com</a></div>
-                    <!--div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-            <a ng-href="{{item.link}}">{{item.title}}</a>
-        </li>
-        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
-        <li ng-hide="isLoggedIn()" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
-        <li ng-show="isLoggedIn()"><p class="navbar-text">Hello {{ getCurrentUser().name }}</p> </li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
-      </ul>
-    </div-->
-                </div>
-            </div>
-        </div>
-        <!-- ngInclude: 'components/header/header.html' -->
-        <div ng-include="'components/header/header.html'" class="ng-scope">
-            <header class="hero-unit ng-scope" id="banner">
-                <div class="container">
-                    <h1><a href="/">My Diesel Mechanic</a></h1>
-                    <p class="lead"><a href="/">Specializing in Power Strokes 7.3l and 6.0l Ford Turbo Diesels</a></p>
-                    <a href="/"><img src="assets/images/ford-logo-200w.png" alt="I'm Yeoman"></a>
-                </div>
-            </header>
-        </div>
-        <div class="container ng-scope">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Contact Info</h3>
+<body>
+    <!-- Page-->
+    <div class="page">
+        <!-- Page Header-->
+        <header class="page-head">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap">
+                <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-stick-up-clone="true" data-md-stick-up-offset="165px" data-lg-stick-up-offset="165px"
+                    class="rd-navbar">
+                    <div class="rd-navbar-aside">
+                        <div data-rd-navbar-toggle=".rd-navbar-aside" class="rd-navbar-aside-toggle"><span></span></div>
+                        <div class="rd-navbar-aside-content">
+                            <div class="shell">
+                                <div class="rd-navbar-aside-inner">
+                                    <div class="rd-navbar-aside-left">
+                                        <address class="contact-info">
+                        <dl>
+                          <dt>ADDRESS</dt>
+                          <dd>1974 SW Biltmore St, # 206 Port Saint Lucie, Florida</dd>
+                        </dl>
+                      </address>
+                                    </div>
+                                    <div class="rd-navbar-aside-right">
+                                        <div class="unit unit-horizontal unit-spacing-sm unit-middle">
+                                            <div class="unit-left"><span class="icon-image"><img src="images/icon-call-39x38.png" alt="" width="39" height="38"/></span></div>
+                                            <div class="unit-body"><a href="callto:7728789166" class="link link-md">(772) 878-9166</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <a href="//www.google.com/url?sa=D&amp;oi=plus&amp;q=https://www.google.com/maps/place/My%2BMechanic%2Bof%2Bthe%2BT.C,%2Bllc/data%3D!4m2!3m1!1s0x88dee963f9567c67:0x814c832171f455ab?gl%3DUS%26hl%3Den" target="_blank"><img alt="Location" src="//www.google.com/maps/vt/data=IPJF7m116ARqg0ah3PQQcPJjK4i6YlvS9ebHQ-ChEK6XIRLs0g89A8Tdzbyv0emMeoYB_WdX9YU1dQ" class="img-full-width img-responsive"></a>
-                            <ul class="fa-ul">
-                                <li class="lead"><i class="fa-li fa fa-map-marker"></i> <a href="//www.google.com/url?sa=D&amp;oi=plus&amp;q=https://www.google.com/maps/place/My%2BMechanic%2Bof%2Bthe%2BT.C,%2Bllc/data%3D!4m2!3m1!1s0x88dee963f9567c67:0x814c832171f455ab?gl%3DUS%26hl%3Den"
-                                        target="_blank"><address>1974 SW Biltmore St Port St Lucie, FL 34984</address></a></li>
-                                <li class="lead"><i class="fa-li fa fa-phone"></i> <a href="tel:7728789166">(772) 878-9166</a></li>
-                                <li class="lead"><i class="fa-li fa fa-fax"></i> <a href="tel:7728789166">(772) 878-3268</a></li>
-                                <li class="lead"><i class="fa-li fa fa-envelope"></i> <a href="mailto:my_mechanic@ymail.com">my_mechanic@ymail.com</a></li>
-                                <li class="lead"><i class="fa-li fa fa-clock-o"></i> Open Monday-Friday 9:00 am - 6:00 pm</li>
+                    </div>
+                    <div class="rd-navbar-inner">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!-- RD Navbar Toggle-->
+                            <button data-rd-navbar-toggle=".rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
+                            <!-- RD Navbar Brand--><a href="index.html" class="rd-navbar-brand"><span class="brand-name"><img src="images/logo.png" alt="" width="270" height="51"/></span></a>
+                        </div>
+                        <div class="rd-navbar-nav-wrap">
+                            <!-- RD Navbar Nav-->
+                            <ul style="display: none;" class="rd-navbar-nav">
+                                <li class="active"><a href="index.html">Home</a>
+                                </li>
+                                <li><a href="about.html">About</a>
+                                    <ul class="rd-navbar-dropdown">
+                                        <li><a href="#">History</a>
+                                        </li>
+                                        <li><a href="#">Features</a>
+                                            <ul class="rd-navbar-dropdown">
+                                                <li><a href="#">Archive</a></li>
+                                                <li><a href="#">Events</a></li>
+                                                <li><a href="404.html">404 Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Basic Service</a>
+                                        </li>
+                                        <li><a href="#">Products</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="services.html">Services</a>
+                                </li>
+                                <!--<li><a href="news.html">News</a>
+                                <ul class="rd-navbar-dropdown">
+                                    <li><a href="post.html">Post page</a>
+                                    </li>
+                                </ul>
+                                </li>
+                                <li><a href="contacts.html">Contacts</a>
+                                </li>-->
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Why Us?</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>We believe honesty pays and that's been our philosophy for over 20 Years.</p>
-                            <p>We get the job done right the first time at an honest price.</p>
-                            <p>We're Ford dealer trained and certified since 1992, ASE Certified and Licensed Technicians</p>
-                            <p>We'll always give it to you straight - even when you might not want to hear it.</p>
-                            <p>We offer same-day appointments and quick turn-arounds on most services, so <strong><a href="tel:7728789166">call us</a>, <a href="mailto:my_mechanic@ymail.com">email us</a> or <a href="tel:7728789166">fax us today</a></strong>                                to get your truck in here!</p>
-                        </div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Our Services</h3>
-                        </div>
-                        <div class="panel-body columned">
-                            <div class="half-size">
-                                <ul class="fa-ul">
-                                    <li><i class="fa-li fa fa-check"></i>Vehicle Service</li>
-                                    <li><i class="fa-li fa fa-check"></i>General Repairs</li>
-                                    <li><i class="fa-li fa fa-check"></i>Major Repairs</li>
-                                    <li><i class="fa-li fa fa-check"></i>Timing Belts</li>
-                                    <li><i class="fa-li fa fa-check"></i>Brakes</li>
-                                </ul>
-                            </div>
-                            <div class="half-size">
-                                <ul class="fa-ul">
-                                    <li><i class="fa-li fa fa-check"></i>Air Conditioning</li>
-                                    <li><i class="fa-li fa fa-check"></i>Water Pumps</li>
-                                    <li><i class="fa-li fa fa-check"></i>Engine Builds</li>
-                                    <li><i class="fa-li fa fa-check"></i>Maintenance</li>
-                                    <li><i class="fa-li fa fa-check"></i>Oil Changes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </nav>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Our Work</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="carousel-example-generic" ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel ng-isolate-scope" ng-swipe-right="prev()" ng-swipe-left="next()" interval="photosInterval">
-                                <ol class="carousel-indicators" ng-show="slides.length > 1">
-                                    <!-- ngRepeat: slide in slides track by $index -->
-                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    <!-- end ngRepeat: slide in slides track by $index -->
-                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <!-- end ngRepeat: slide in slides track by $index -->
-                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                    <!-- end ngRepeat: slide in slides track by $index -->
-                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                                    <!-- end ngRepeat: slide in slides track by $index -->
-                                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                                    <!-- end ngRepeat: slide in slides track by $index -->
-                                </ol>
-                                <div class="carousel-inner" ng-transclude="">
-                                    <!-- ngRepeat: slide in slides -->
-                                    <div ng-class="{
-    'active': leaving || (active &amp;&amp; !entering),
-    'prev': (next || active) &amp;&amp; direction=='prev',
-    'next': (next || active) &amp;&amp; direction=='next',
-    'right': direction=='prev',
-    'left': direction=='next'
-  }" class="active item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
-                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/1"><img ng-src="/assets/images/f-250/1.jpg" style="margin:auto" src="/assets/images/f-250/1.jpg"></a>
-                                        <div class="carousel-caption ng-scope">
-                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/1">F-250</a></h4>
-                                            <p class="ng-binding"></p>
-                                        </div>
-                                    </div>
-                                    <!-- end ngRepeat: slide in slides -->
-                                    <div ng-class="{
-    'active': leaving || (active &amp;&amp; !entering),
-    'prev': (next || active) &amp;&amp; direction=='prev',
-    'next': (next || active) &amp;&amp; direction=='next',
-    'right': direction=='prev',
-    'left': direction=='next'
-  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
-                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/2"><img ng-src="/assets/images/f-350/1.jpg" style="margin:auto" src="/assets/images/f-350/1.jpg"></a>
-                                        <div class="carousel-caption ng-scope">
-                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/2">F-350</a></h4>
-                                            <p class="ng-binding"></p>
-                                        </div>
-                                    </div>
-                                    <!-- end ngRepeat: slide in slides -->
-                                    <div ng-class="{
-    'active': leaving || (active &amp;&amp; !entering),
-    'prev': (next || active) &amp;&amp; direction=='prev',
-    'next': (next || active) &amp;&amp; direction=='next',
-    'right': direction=='prev',
-    'left': direction=='next'
-  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
-                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/3"><img ng-src="/assets/images/jeep/1.jpg" style="margin:auto" src="/assets/images/jeep/1.jpg"></a>
-                                        <div class="carousel-caption ng-scope">
-                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/3">Jeep</a></h4>
-                                            <p class="ng-binding"></p>
-                                        </div>
-                                    </div>
-                                    <!-- end ngRepeat: slide in slides -->
-                                    <div ng-class="{
-    'active': leaving || (active &amp;&amp; !entering),
-    'prev': (next || active) &amp;&amp; direction=='prev',
-    'next': (next || active) &amp;&amp; direction=='next',
-    'right': direction=='prev',
-    'left': direction=='next'
-  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
-                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/4"><img ng-src="/assets/images/jeep-wrangler/1.jpg" style="margin:auto" src="/assets/images/jeep-wrangler/1.jpg"></a>
-                                        <div class="carousel-caption ng-scope">
-                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/4">Jeep Wrangler</a></h4>
-                                            <p class="ng-binding"></p>
-                                        </div>
-                                    </div>
-                                    <!-- end ngRepeat: slide in slides -->
-                                    <div ng-class="{
-    'active': leaving || (active &amp;&amp; !entering),
-    'prev': (next || active) &amp;&amp; direction=='prev',
-    'next': (next || active) &amp;&amp; direction=='next',
-    'right': direction=='prev',
-    'left': direction=='next'
-  }" class="item text-center ng-isolate-scope" ng-transclude="" ng-repeat="slide in slides" active="slide.active">
-                                        <a ui-sref="auto.detail({id:slide.id})" class="ng-scope" href="/auto/5"><img ng-src="/assets/images/mustang/1.jpg" style="margin:auto" src="/assets/images/mustang/1.jpg"></a>
-                                        <div class="carousel-caption ng-scope">
-                                            <h4><a ui-sref="auto.detail({id:slide.id})" class="ng-binding" href="/auto/5">Mustang</a></h4>
-                                            <p class="ng-binding"></p>
-                                        </div>
-                                    </div>
-                                    <!-- end ngRepeat: slide in slides -->
+        </header>
+        <!-- Page Content-->
+        <main class="page-content">
+            <!-- Cooling System Service $20 Off*-->
+            <section class="bg-image-wrap">
+                <div class="shell">
+                    <div class="range range-md-justify">
+                        <div class="cell-sm-6">
+                            <div class="bg-image">
+                                <div class="section-1 section-30 section-sm-80 section-lg-123">
+                                    <h2>Specializing in 7.3/6.0s</h2>
+                                    <p class="h1">Free Diagnosis</p>
+                                    <ul class="list-marked list-marked-white">
+                                        <li>Bullet Point #1</li>
+                                        <li>Bullet Point #2</li>
+                                        <li>Bullet Point #3</li>
+                                        <li>Bullet Point #4</li>
+                                    </ul>
+                                    <!--<p class="text-style-1">*Offer expires 10/30/15.Not valid with any other offer.</p><a href="#" class="btn btn-primary">make an appointment</a>-->
                                 </div>
-                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
+                                <div class="bg-image-inner"><img src="images/chevy.jpg" alt="" width="2048" height="819" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-5 block-top-level offset-top-0">
+                            <div class="section-1 section-40 section-sm-87 section-lg-150">
+                                <div style="display:none;" class="rd-mailform-wrap-dark">
+                                    <h4>Make a request</h4>
+                                    <!-- RD Mailform-->
+                                    <form data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" class="rd-mailform offset-top-23">
+                                        <div class="form-group">
+                                            <label for="contact-email" class="form-label">E-mail</label>
+                                            <input id="contact-email" type="email" name="email" data-constraints="@Required @Email" class="form-control">
+                                        </div>
+                                        <div class="form-group offset-1">
+                                            <label for="contact-phone" class="form-label">Phone</label>
+                                            <input id="contact-phone" type="text" name="phone" data-constraints="@Numeric" class="form-control">
+                                        </div>
+                                        <div class="form-group offset-1">
+                                            <label for="contact-message" class="form-label">Message</label>
+                                            <textarea id="contact-message" name="message" data-constraints="@Required" class="form-control"></textarea>
+                                        </div>
+                                        <button type="submit" class="offset-1 btn btn-primary btn-block">Send now!</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">What Our Customers Say</h3>
+            </section>
+
+            <!-- Auto Repair Services-->
+            <section class="section-50 section-sm-top-80 section-sm-bottom-100">
+                <div class="shell">
+                    <div class="range">
+                        <div class="cell-xs-12 text-center">
+                            <h3>Auto Repair Services</h3>
+                            <p class="text-primary">We offer a variety of services to help you get back on the road.</p>
                         </div>
-                        <div class="panel-body">
-                            <blockquote>
-                                <p>Joe and his team literally saved my truck.</p>
-                                <p>When I brought it to him, I was considering selling it and getting what I could for it because I was having so many problems.</p>
-                                <p>After some honest discussions, I decided to let Joe's team try and fix it and haven't had a problem since.</p>
-                                <footer>Cody Swann <cite title="Source Title">2006 F-250</cite></footer>
-                            </blockquote>
+                    </div>
+                    <div class="range range-condensed range-bordered offset-top-30 offset-sm-top-60">
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <div class="product">
+                                    <div class="product-image-wrap">
+                                        <figure class="product-image">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="97px" height="59px" viewbox="0 0 97 59" enable-background="new 0 0 97 59" xml:space="preserve">
+                          <g>
+                            <g>
+                              <path d="M35.166,11.175h13.619c1.914,0,3.478-1.542,3.478-3.477c0-1.919-1.564-3.467-3.478-3.467H35.166                c-1.918,0-3.467,1.547-3.467,3.467C31.699,9.633,33.249,11.175,35.166,11.175z"></path>
+                              <path d="M91.431,0.95L64.805,15.97c-0.958-0.877-2.235-1.378-3.636-1.378H22.256c-3.053,0-5.543,2.465-5.543,5.548                v33.394c0,3.118,2.49,5.624,5.543,5.624h36.12h2.793h12.225c3.048,0,4.153-2.252,5.543-5.624L96.989,6.495                C96.989,3.415,94.501,0.95,91.431,0.95z M41.996,48.741c-5.012,0-9.051-4.064-9.051-9.074c0-6.602,7.663-14.387,7.973-14.695                c0.313-0.314,0.678-0.449,1.078-0.449c0.401,0,0.76,0.135,1.081,0.449c0.302,0.307,7.967,8.092,7.967,14.695                C51.044,44.677,46.989,48.741,41.996,48.741z"></path>
+                              <path d="M21.427,9.11c0,0.959,0,0.188,0,1.158l5.579-0.013c0.027-3.149-0.145-4.526-2.464-7.139                c-2.917-3.316-8.355-2.713-12.27-2.713c-4.575,0-9.624,0.512-11.43,5.716c-1.175,3.366,0.324,7.258,1.002,10.616                c0.668,3.292,0.961,7.083,2.061,10.226c1.643,4.688,3.113,5.336,7.271,5.421l-0.008-5.532c-2.069,0.186-2.53-4.37-2.53-4.37                c-0.586-2.958-1.159-5.867-1.763-8.828c-0.284-1.314-0.535-2.633-0.822-3.953C5.788,8.391,5.72,8.155,6.675,7.037                C8.197,5.324,13.08,5.77,15.017,5.77C17.361,5.77,21.427,5.609,21.427,9.11z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="product-body">
+                                        <h5><a href="#">Oil Change</a></h5>
+                                        <p>Regularly changing your oil and filter will help the engine work its best.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <div class="product">
+                                    <div class="product-image-wrap">
+                                        <figure class="product-image">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="76px" viewbox="0 0 75 76" enable-background="new 0 0 75 76" xml:space="preserve">
+                          <g>
+                            <g>
+                              <path d="M63.552,10.771C50.23-2.383,29.667-3.46,15.133,7.381c4.139,2.156,6.991,6.514,6.991,11.55v1.87                c0,0.635-0.184,1.286-0.504,1.841c-2.749,4.589-4.2,9.849-4.2,15.24c0,5.177,1.364,10.283,3.921,14.768                c0.463,0.783,0.586,1.738,0.365,2.64c-1.299,5.135-5.511,8.907-10.579,9.65c0.006,0.008,0.015,0.017,0.023,0.025                c14.816,14.619,38.576,14.345,53.039-0.629C78.65,49.357,78.381,25.39,63.552,10.771z M35.013,20.971                c1.177-1.2,3.091-1.221,4.276-0.05c1.18,1.195,1.205,3.101,0.045,4.317c-1.152,1.192-3.065,1.217-4.26,0.048                C33.878,24.121,33.859,22.193,35.013,20.971z M20.582,35.921c1.154-1.192,3.073-1.213,4.254-0.046                c1.183,1.167,1.225,3.095,0.049,4.3c-1.16,1.212-3.069,1.233-4.256,0.044C19.423,39.05,19.403,37.119,20.582,35.921z                M39.694,54.765c-1.184,1.202-3.069,1.241-4.277,0.05c-1.183-1.165-1.207-3.099-0.049-4.296c1.156-1.22,3.069-1.241,4.284-0.046                C40.823,51.635,40.85,53.573,39.694,54.765z M31.63,43.788c-3.253-3.182-3.308-8.421-0.153-11.708                c3.185-3.263,8.367-3.321,11.597-0.135c3.255,3.191,3.308,8.449,0.151,11.715C40.047,46.944,34.859,47,31.63,43.788z                M54.121,39.835c-1.154,1.192-3.067,1.217-4.254,0.05c-1.179-1.195-1.203-3.099-0.043-4.32c1.148-1.192,3.073-1.217,4.252-0.045                C55.286,36.683,55.305,38.615,54.121,39.835z"></path>
+                              <path d="M18.305,19.448c0-4.099-2.656-7.548-6.344-8.74c-0.852-0.265-1.778-0.434-2.741-0.434H2.985                c-1.583,0-2.842,1.295-2.842,2.875v6.298v32.114v6.301c0,1.575,1.259,2.873,2.842,2.873h5.143H9.22                c4.229,0,7.806-2.942,8.806-6.914c-2.716-4.709-4.263-10.186-4.263-16.015c0-6.052,1.656-11.702,4.542-16.545V19.448z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="product-body">
+                                        <h5><a href="#">Brakes</a></h5>
+                                        <p>Brake maintenance is crucial to keeping your vehicle operating safely.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <div class="product">
+                                    <div class="product-image-wrap">
+                                        <figure class="product-image">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76px" height="76px" viewbox="0 0 76 76" enable-background="new 0 0 76 76" xml:space="preserve">
+                          <g>
+                            <g>
+                              <path d="M73.639,71.101h-2.29V52.742c0-4.896-3.235-12.156-12.148-12.156c-0.845,0-2.591,0-2.687-2.706V19.401                c0-8.903-7.26-12.156-12.148-12.156h-6.276V2.378C38.092,1.057,37.035,0,35.707,0c-1.289,0-2.346,1.057-2.346,2.378v18.954                c0,1.32,1.057,2.376,2.346,2.376c1.328,0,2.384-1.057,2.384-2.376v-4.593h6.226c2.736,0.098,2.736,1.844,2.736,2.663v18.531                c0,4.863,3.22,12.147,12.148,12.147c0.841,0,2.539,0,2.639,2.71v18.312h-2.417c-1.289,0-2.348,1.063-2.348,2.378                c0,1.295,1.059,2.36,2.348,2.36h14.215c1.302,0,2.361-1.065,2.361-2.36C76,72.164,74.941,71.101,73.639,71.101z"></path>
+                              <path d="M28.607,55.705c0,3.249-2.663,5.912-5.918,5.912H6.087c-3.241,0-5.927-2.663-5.927-5.912v-21.33                c0-3.273,2.687-5.936,5.927-5.936h16.602c3.255,0,5.918,2.663,5.918,5.936V55.705z"></path>
+                              <rect x="9.647" y="66.371" width="9.485" height="9.469"></rect>
+                              <rect x="9.647" y="0" width="9.485" height="23.708"></rect>
+                            </g>
+                          </g>
+                        </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="product-body">
+                                        <h5><a href="#">Exhaust &amp; Mufflers</a></h5>
+                                        <p>Mufflers do more than keep your car quiet. Since 1972, we've been the muffler experts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <div class="product">
+                                    <div class="product-image-wrap">
+                                        <figure class="product-image">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76px" height="76px" viewbox="0 0 76 76" enable-background="new 0 0 76 76" xml:space="preserve">
+                          <g>
+                            <g>
+                              <path d="M38.049,0C17.086,0,0.071,16.959,0.071,37.956c0,20.985,17.015,37.956,37.978,37.956                c20.959,0,37.95-16.971,37.95-37.956C75.998,16.959,59.007,0,38.049,0z M38.051,72.347C19.637,71.998,3.232,56.977,3.643,37.958                C4.041,19.546,19.018,3.176,38.051,3.546C56.844,3.97,71.694,18.605,72.389,37.31c0.021,0.239,0.039,0.43,0.039,0.649                c0,0.212-0.019,0.453-0.039,0.659C71.694,56.767,56.829,72.734,38.051,72.347z"></path>
+                              <path d="M38.057,6.508c-17.366,0-31.465,14.084-31.465,31.452c0,17.356,14.099,31.434,31.465,31.434                c17.349,0,31.429-14.078,31.429-31.434C69.486,20.592,55.406,6.508,38.057,6.508z M61.863,35.809                c-6.523,2.108-6.99,3.265-11.689,5.427c-0.502,1.879-1.427,3.596-2.706,4.999c3.273,5.304,2.76,6.184,7.063,12.141                c2.162,2.978-2.472,6.325-4.622,3.332c-4.605-6.329-5.573-5.52-10.409-11.276c-0.49,0.046-0.967,0.079-1.443,0.079                c-0.598,0-1.213-0.048-1.773-0.131c-4.709,5.691-5.545,5.047-10.116,11.328c-2.157,2.993-6.779-0.353-4.63-3.332                c4.355-5.98,3.689-6.946,6.869-12.342c-1.234-1.43-2.089-3.172-2.556-5.07c-4.599-2.047-5.161-3.062-11.628-5.155                c-3.503-1.143-1.745-6.606,1.753-5.425c5.619,1.779,7.177,1.557,10.773,2.118c1.438-3.033,4.101-5.417,7.32-6.487                c0.471-3.101,1.002-4.67,1.002-10.243c0-3.662,5.723-3.662,5.723,0c0,5.573,0.604,7.135,1.2,10.228                c3.288,1.085,5.981,3.542,7.443,6.684c3.52-0.636,5.061-0.524,10.662-2.301C63.606,29.195,65.383,34.666,61.863,35.809z"></path>
+                              <path d="M38.055,29.041c-4.93,0-8.921,3.976-8.921,8.919c0,4.92,3.991,8.904,8.921,8.904                c4.882,0,8.876-3.985,8.876-8.904C46.931,33.017,42.936,29.041,38.055,29.041z M38.055,43.529c-3.065,0-5.561-2.513-5.561-5.568                c0-3.064,2.496-5.535,5.561-5.535c3.053,0,5.54,2.471,5.54,5.535C43.595,41.016,41.108,43.529,38.055,43.529z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="product-body">
+                                        <h5><a href="#">Tires &amp; Wheels</a></h5>
+                                        <p>Regularly inspect and service your tires to prevent a blowout, a flat, or a costly accident.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <div class="product">
+                                    <div class="product-image-wrap">
+                                        <figure class="product-image">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76px" height="75px" viewbox="0 0 76 75" enable-background="new 0 0 76 75" xml:space="preserve">
+                          <g>
+                            <g>
+                              <path d="M71.957,39.884c-1.523,0.006-3.026,0.011-4.528,0.032c0.87,0.898,1.729,1.796,2.637,2.648                c2.356,2.393-1.306,6.083-3.691,3.696c-2.095-2.062-4.175-3.925-6.262-5.978c-3.208,0.016-10,0-15.645-0.005                c4.013,4,8.802,8.736,11.066,11.027c2.952,0,5.707,0.194,8.676,0.194c3.364,0,3.364,5.193,0,5.193c-1.25,0-2.486,0-3.739,0                c1.073,1.091,2.112,2.172,3.179,3.269c2.371,2.331-1.309,6.021-3.688,3.624c-1.039-1.019-2.095-2.105-3.131-3.167                c0,1.274,0,2.551,0,3.817c0,3.317-5.218,3.317-5.218,0c0-3.022,0-6.078,0-9.102c-2.314-2.344-7.336-7.336-11.4-11.387                c0,5.828,0.022,12.992,0,16.363c2.116,2.051,3.927,4.167,6.009,6.29c2.382,2.317-1.306,6.027-3.665,3.643                c-0.859-0.849-1.773-1.753-2.637-2.667c-0.006,1.522-0.019,3.075-0.027,4.57c-0.021,3.33-5.234,3.33-5.204,0                c0.003-1.484,0.019-3.038,0.024-4.538c-0.894,0.925-1.808,1.85-2.699,2.707c-2.395,2.39-6.052-1.296-3.701-3.626                c2.156-2.172,4.305-4.339,6.438-6.449c0.021-3.301,0-10.287-0.006-16.07c-4.086,4.15-9.172,9.199-11.554,11.548                c0,3.011-0.185,5.774-0.185,8.718c0,3.317-5.194,3.317-5.194,0c0-1.25,0-2.492,0-3.744c-1.06,1.064-2.154,2.137-3.235,3.142                c-2.373,2.384-6.063-1.312-3.665-3.613c1.052-1.073,2.133-2.148,3.211-3.194c-1.274,0-2.551,0-3.825,0                c-3.348,0-3.348-5.218,0-5.218c3.013,0,6.052,0,9.102,0c2.316-2.312,7.3-7.269,11.351-11.33c-5.8,0.005-13.016,0.021-16.361,0.005                c-2.079,2.054-4.169,3.917-6.27,5.978c-2.366,2.387-6.062-1.304-3.672-3.696c0.875-0.852,1.767-1.75,2.634-2.648                c-1.497-0.021-3.025-0.027-4.531-0.032c-3.345-0.016-3.345-5.226,0-5.199c1.497,0,3.012,0.016,4.52,0.021                c-0.927-0.863-1.818-1.763-2.712-2.688c-2.382-2.331,1.306-6.016,3.662-3.629c2.172,2.105,4.31,4.258,6.438,6.368                c3.407,0.019,10.923-0.006,16.795-0.016c-4.173-4.129-9.455-9.454-11.855-11.863c-3.05,0-6.089,0-9.102,0                c-3.348,0-3.348-5.196,0-5.196c1.274,0,2.551,0,3.825,0c-1.078-1.011-2.159-2.086-3.211-3.145                c-2.398-2.376,1.293-6.064,3.665-3.696c1.08,1.075,2.175,2.156,3.235,3.226c0-1.242,0-2.5,0-3.742c0-3.39,5.194-3.39,5.194,0                c0,2.938,0.185,5.702,0.185,8.634c2.382,2.36,7.468,7.47,11.554,11.575c0.006-5.734,0.027-12.836,0.006-16.086                c-2.133-2.172-4.282-4.261-6.438-6.433c-2.351-2.379,1.306-6.075,3.701-3.686c0.891,0.9,1.805,1.831,2.699,2.688                c-0.006-1.486-0.021-2.984-0.024-4.481c-0.029-3.392,5.183-3.376,5.204,0c0.008,1.497,0.021,3.011,0.027,4.508                c0.864-0.841,1.778-1.728,2.637-2.632c2.359-2.333,6.047,1.29,3.665,3.68c-2.082,2.126-3.894,4.166-6.009,6.279                c0.022,3.325,0,10.597,0,16.382c4.065-4.065,9.086-8.989,11.4-11.341c0-3.07,0-6.089,0-9.089c0-3.39,5.218-3.39,5.218,0                c0,1.269,0,2.551,0,3.82c1.036-1.081,2.093-2.161,3.131-3.258c2.379-2.333,6.059,1.306,3.688,3.707                c-1.067,1.081-2.106,2.177-3.179,3.258c1.253,0,2.489,0,3.739,0c3.364,0,3.364,5.153,0,5.153c-2.969,0-5.724,0.236-8.676,0.236                c-2.355,2.314-7.478,7.414-11.572,11.51c5.743,0.006,12.786,0.024,16.048,0.006c2.186-2.11,4.308-4.263,6.446-6.368                c2.382-2.387,6.047,1.298,3.688,3.629c-0.917,0.925-1.802,1.825-2.691,2.688c1.484-0.005,2.992-0.021,4.504-0.021                C75.31,34.659,75.31,39.868,71.957,39.884z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="product-body">
+                                        <h5><a href="#">A/C</a></h5>
+                                        <p>Keep your car cool and increase your gas mileage with regular AC checks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <div class="product">
+                                    <div class="product-image-wrap">
+                                        <figure class="product-image">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="75px" height="57px" viewbox="0 0 75 57" enable-background="new 0 0 75 57" xml:space="preserve">
+                          <g>
+                            <g>
+                              <path d="M0,43.974c0,6.799,5.512,12.287,12.299,12.287h50.412c6.787,0,12.295-5.488,12.295-12.287V18.746H0V43.974                z M46.993,34.155h15.975c1.471,0,2.68,1.185,2.68,2.68c0,1.446-1.208,2.635-2.68,2.635H46.993c-1.448,0-2.658-1.189-2.658-2.635                C44.335,35.34,45.546,34.155,46.993,34.155z M12.045,34.155h5.306v-5.337c0-1.467,1.208-2.652,2.677-2.652                s2.658,1.185,2.658,2.652v5.337h5.333c1.469,0,2.65,1.185,2.65,2.68c0,1.446-1.181,2.635-2.65,2.635h-5.333v5.353                c0,1.441-1.189,2.636-2.658,2.636c-1.475,0-2.677-1.195-2.677-2.636v-5.353h-5.306c-1.477,0-2.656-1.189-2.656-2.635                C9.389,35.34,10.567,34.155,12.045,34.155z"></path>
+                              <path d="M65.631,5.047c0.01-0.111,0.016-0.224,0.016-0.36C65.648,2.098,63.526,0,60.95,0H46.88                c-2.584,0-4.678,2.098-4.678,4.687h-9.391C32.811,2.098,30.715,0,28.137,0H14.069c-2.59,0-4.681,2.098-4.681,4.687                c0,0.136,0.012,0.25,0.019,0.36c-4.455,1.082-7.959,4.567-9.037,9.02h74.293C73.556,9.615,70.058,6.129,65.631,5.047z"></path>
+                            </g>
+                          </g>
+                        </svg>
+                                        </figure>
+                                    </div>
+                                    <div class="product-body">
+                                        <h5><a href="#">Batteries</a></h5>
+                                        <p>The battery has the crucial job of providing energy your vehicle needs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="range text-center offset-top-30 offset-sm-top-60">
+                        <div class="cell-xs-12"><a href="services.html" class="btn btn-lighter">See all services</a></div>
+                    </div>-->
+                </div>
+            </section>
+
+            <!-- About us-->
+            <section class="section-50 section-sm-top-87 section-sm-bottom-100 bg-primary">
+                <div class="shell">
+                    <div class="range">
+                        <div class="cell-xs-12 text-center">
+                            <h3>About us</h3>
+                            <p>My Mechanic N Diesel is committed to earning your trust by providing the expertise, value and responsiveness you expect.</p>
+                        </div>
+                    </div>
+                    <div class="range offset-top-40 offset-sm-top-46">
+                        <div class="cell-sm-6">
+                            <h5><span>Full Service</span><span>Auto Repair Center</span></h5>
+                            <div class="inset-sm-right-15 inset-md-right-30 inset-lg-right-55 offset-top-20">
+                                <p>
+                                    My Mechanic N Diesel offers complete auto care for your vehicle. Whether it’s time for your next factory recommended maintenance visit, a routine oil change, new tires, or repair services on your brakes, muffler and exhaust, suspension, air conditioner,
+                                    or any other mechanical or electrical component of your car, My Mechanic N Diesel is in your neighborhood and ready to serve you.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 offset-top-40 offset-sm-top-0">
+                            <h5><span>Why Us?</span></h5>
+                            <div class="inset-sm-right-15 inset-md-right-30 inset-lg-right-55 offset-top-20">
+
+
+                                <p> We believe honesty pays and that's been our philosophy for over 20 Years. </p>
+
+                                <p> We get the job done right the first time at an honest price. </p>
+
+                                <p> We're Ford dealer trained and certified since 1992, ASE Certified and Licensed Technicians </p>
+
+                                <p> We'll always give it to you straight - even when you might not want to hear it. </p>
+
+                                <p> We offer same-day appointments and quick turn-arounds on most services, so call us, email us or fax us today to get your truck in here! </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- testimonials-->
+            <section class="section-50 section-sm-top-87 section-sm-bottom-115">
+                <div class="shell">
+                    <div class="range">
+                        <div class="cell-xs-12 text-center">
+                            <h3 class="header-image"><img src="images/quote-46x37.png" alt="" width="46" height="37" /><span>testimonials</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="range range-condensed range-bordered range-sm-veil-borders offset-top-30 offset-sm-top-65">
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <blockquote class="quote quote-variant-1">
+                                    <figure class="quote-image"><img src="images/cody.jpg" alt="" width="109" height="109" />
+                                    </figure>
+                                    <div class="quote-body">
+                                        <p>
+                                            <q>Joe and his team literally saved my truck. When I brought it to him, I was considering selling it and getting what I could for it because I was having so many problems. After some honest discussions, I decided to let Joe's team try and fix it and haven't had a problem since.</q>
+                                        </p>
+                                        <cite>Cody</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <blockquote class="quote quote-variant-1">
+                                    <figure class="quote-image"><img src="http://via.placeholder.com/109x109.jpg" alt="" width="109" height="109" />
+                                    </figure>
+                                    <div class="quote-body">
+                                        <p>
+                                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare enim a tristique dictum. Nullam placerat gravida justo, quis convallis lacus fringilla ac. Integer at convallis odio. Mauris molestie augue id tortor rhoncus porttitor. Sed bibendum tempor tempus.</q>
+                                        </p>
+                                        <cite>Name #2</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="range-item-inner">
+                                <blockquote class="quote quote-variant-1">
+                                    <figure class="quote-image"><img src="http://via.placeholder.com/109x109.jpg" alt="" width="109" height="109" />
+                                    </figure>
+                                    <div class="quote-body">
+                                        <p>
+                                            <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ornare enim a tristique dictum. Nullam placerat gravida justo, quis convallis lacus fringilla ac. Integer at convallis odio. Mauris molestie augue id tortor rhoncus porttitor. Sed bibendum tempor tempus..</q>
+                                        </p>
+                                        <cite>Name #3</cite>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!-- Page Footer-->
+        <footer class="page-foot bg-gray-dark object-wrap object-wrap-sm-right">
+            <div class="object-wrap-body object-wrap-map sm-width-c6">
+                <!-- RD Google Map-->
+                <div data-zoom="15" data-x="-73.9874068" data-y="40.643180" data-styles="[{&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ff1a00&quot;},{&quot;invert_lightness&quot;:true},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:33},{&quot;gamma&quot;:0.5}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#2D333C&quot;}]}]"
+                    class="rd-google-map rd-google-map__model">
+                    <ul class="map_locations">
+                        <li data-y="40.643180" data-x="-73.9874068">
+                            <p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-foot-inner">
+                <div class="shell">
+                    <div class="range">
+                        <div class="cell-sm-6">
+                            <h3>Contacts</h3>
+                            <address class="contact-info">
+                  <dl>
+                    <dt>ADDRESS</dt>
+                    <dd>1974 SW Biltmore St, # 206, Port Saint Lucie, Florida 34984</dd>
+                  </dl>
+                  <dl class="terms-list-md offset-top-17">
+                    <dt>tel</dt>
+                    <dd><a href="callto:#">(772) 878-9166</a></dd>
+                  </dl>
+                  <p class="offset-top-15">Open Monday-Friday 9:00 am - 6:00 pm</p>
+                  <dl class="terms-list-sm offset-top-12">
+                    <dt>E-mail</dt>
+                    <dd><a href="mailto:#" class="link-primary-contrast">my_mechanic@ymail.com</a></dd>
+                  </dl>
+                  <div class="offset-top-30 offset-sm-top-55">
+                    <ul class="list-inline list-inline-xs">
+                      <li><a href="https://www.facebook.com/mymechanicndiesel/"><span class="icon icon-xs icon-white fa-facebook"></span></a></li>
+                      <!--<li><a href="#"><span class="icon icon-xs icon-white fa-twitter"></span></a></li>
+                      <li><a href="#"><span class="icon icon-xs icon-white fa-google-plus"></span></a></li>
+                      <li><a href="#"><span class="icon icon-xs icon-white fa-youtube"></span></a></li>-->
+                    </ul>
+                  </div>
+                  <p class="rights">&#169;&nbsp;<span id="copyright-year"></span>&nbsp;&nbsp;
+                  </p>
+                </address>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
+        </footer>
     </div>
-  </div>
+    <!-- Global Mailform Output-->
+    <div id="form-output-global" class="snackbars"></div>
 
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
-</div-->
-        <!-- ngInclude: 'components/footer/footer.html' -->
-        <div ng-include="'components/footer/footer.html'" class="ng-scope">
-            <footer class="footer ng-scope">
-                <div class="container">
-                    <p>© My Mechanic of the T.C, LLC</p>
-                </div>
-            </footer>
-        </div>
-    </div>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-XXXXX-X');
-        ga('send', 'pageview');
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
